@@ -6,6 +6,6 @@
 
 ```
 mvn clean package
-java -jar target/airports-search-0.0.1-RELEASE.jar
+java -Xmx7m -jar target/airports-search-0.0.1-RELEASE.jar
 ```
 
