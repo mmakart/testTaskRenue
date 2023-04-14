@@ -1,0 +1,11 @@
+package com.github.mmakart.testTaskRenue.util;
+
+public enum LexemeType {
+	STRING, SINGLE_QUOTE,
+	NUMBER,
+	LESS_THAN, MORE_THAN, NOT_EQUALS, EQUALS,
+	OR, AND,
+	LEFT_BRACKET, RIGHT_BRACKET,
+	LEFT_SQUARE_BRACKET, RIGHT_SQUARE_BRACKET,
+	EOF
+}
