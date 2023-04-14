@@ -1,6 +1,7 @@
 package com.github.mmakart.testTaskRenue.util;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Parser {
@@ -11,6 +12,10 @@ public class Parser {
 	}
 
 	private List<Lexeme> parseToLexemes(String s) {
+		if (s.isEmpty()) {
+			return Collections.emptyList();
+		}
+		
 		List<Lexeme> lexemes = new ArrayList<>();
 		
 		State state = State.OUTSIDE_STRING;
@@ -297,6 +302,10 @@ public class Parser {
 	}
 	
 	public Expression parseExpression(String s) {
+		if (s.isEmpty()) {
+			return (airport) -> true;
+		}
+		
 		LexemeBuffer lexemes = new LexemeBuffer(parseToLexemes(s));
 		return parseExpression(lexemes);
 	}

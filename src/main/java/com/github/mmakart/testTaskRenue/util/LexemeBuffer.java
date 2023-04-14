@@ -1,6 +1,7 @@
 package com.github.mmakart.testTaskRenue.util;
 
 import java.util.List;
+import java.util.NoSuchElementException;
 
 public class LexemeBuffer {
 	private List<Lexeme> lexemes;
@@ -11,6 +12,9 @@ public class LexemeBuffer {
 	}
 
 	public Lexeme next() {
+		if (pos >= lexemes.size()) {
+			throw new NoSuchElementException();
+		}
 		return lexemes.get(pos++);
 	}
 	
