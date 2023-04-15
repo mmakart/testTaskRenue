@@ -34,6 +34,10 @@ public final class Airport {
 		}
 	}
 	
+	public Airport(Object... values) {
+		this.values = values;
+	}
+	
 	private static enum State {
 		INSIDE_STRING, OUTSIDE_STRING
 	}
