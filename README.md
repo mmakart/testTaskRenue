@@ -9,3 +9,6 @@ mvn clean package
 java -Xmx7m -jar target/airports-search-0.0.1-RELEASE.jar
 ```
 
+## Решения, которые я принял при разработке программы, не указанные в требованиях
+
+Чтобы программа использовала память в пределах 7 мегабайт, сжал данные, представляющие собой аэропорты в памяти, с помощью классов `DeflaterOutputStream` и `InflaterInputStream`.
